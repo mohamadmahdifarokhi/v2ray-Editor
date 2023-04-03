@@ -4,7 +4,7 @@
   "description": "ربات تلگرامی به آدرس زیر: @WeePeeNIRCFBot",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "node bot.js"
   },
   "author": "",
   "license": "ISC",
