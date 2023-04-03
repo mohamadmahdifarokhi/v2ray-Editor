@@ -370,7 +370,8 @@ var text = document.getElementById('text')
 
 btn.addEventListener("click",() => {
     var config = document.getElementById('input').value
-    var bytes = base64.decode(config);
+    var configg = config.replace(/vmess:\/\//gm,'')
+    var bytes = base64.decode(configg);
     var text = utf8.decode(bytes);
     var list = JSON.parse(text);
     var domains = ["mci.ircf.space","mtn.ircf.space","rtl.ircf.space","mkh.ircf.space","hwb.ircf.space","ast.ircf.space","sht.ircf.space","prs.ircf.space","mbt.ircf.space","rsp.ircf.space","ztl.ircf.space","psm.ircf.space","smt.ircf.space"]
