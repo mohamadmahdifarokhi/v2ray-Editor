@@ -366,16 +366,139 @@
 }(typeof exports === 'undefined' ? this.utf8 = {} : exports));
 
 var btn = document.getElementById('btn')
+var vlessbtn = document.getElementById('btn-vless')
+var trojanbtn = document.getElementById('btn-trojan')
 var text = document.getElementById('text')
 
+var domains = ["mci.ircf.space","mtn.ircf.space","rtl.ircf.space","mkh.ircf.space","hwb.ircf.space","ast.ircf.space","sht.ircf.space","prs.ircf.space","mbt.ircf.space","rsp.ircf.space","ztl.ircf.space","psm.ircf.space","smt.ircf.space"]
+var names = ["Hamrah","Irancell", "Rightel", "Mokhaberat", "Hiweb", "Asiatech", "Shatel", "Pars Online", "MobinNet", "Respina", "Zitel", "Pishgaman", "Samantel"]
+
+vlessbtn.addEventListener("click",() => {
+	document.getElementById('configs').textContent = ''
+	var config = document.getElementById('input-vless').value
+	var count = 0
+	var text2
+	for (i in domains) {
+		var configg = config.replace(/@(.*?):/gm,"@"+domains[i]+':')
+		
+		switch (count) {
+			case 0:
+			  text2 = "همراه اول";
+			  break;
+			case 1:
+			  text2 = "ایرانسل";
+			  break;
+			case 2:
+			  text2 = "رایتل";
+			  break;
+			case 3:
+			  text2 = "مخابرات";
+			  break;
+			case 4:
+			  text2 = "های وب";
+			  break;
+			case 5:
+			  text2 = "آسیاتک";
+			  break;
+			case 6:
+			  text2 = "شاتل";
+			  break;
+			case 7:
+			  text2 = "پارس آنلاین";
+			  break;
+			case 8:
+			  text2 = "مبین نت";
+			  break;
+			case 9:
+			  text2 = "رسپینا";
+			  break;
+			case 10:
+			  text2 = "زیتل";
+			  break;
+			case 11:
+			  text2 = "پیشگامان";
+			  break;
+			case 12:
+			  text2 = "سامانتل";
+			  break;
+		  }
+
+		  document.getElementById('configs').textContent += text2+": \n" + configg + " \n\n"
+		  count++
+	}
+
+	
+})
+
+trojanbtn.addEventListener("click",() => {
+	document.getElementById('configs').textContent = ''
+	var config = document.getElementById('input-trojan').value
+	var count = 0
+	var text2
+	for (i in domains) {
+		var configg = config.replace(/@(.*?):/gm,"@"+domains[i]+':')
+		
+		switch (count) {
+			case 0:
+			  text2 = "همراه اول";
+			  break;
+			case 1:
+			  text2 = "ایرانسل";
+			  break;
+			case 2:
+			  text2 = "رایتل";
+			  break;
+			case 3:
+			  text2 = "مخابرات";
+			  break;
+			case 4:
+			  text2 = "های وب";
+			  break;
+			case 5:
+			  text2 = "آسیاتک";
+			  break;
+			case 6:
+			  text2 = "شاتل";
+			  break;
+			case 7:
+			  text2 = "پارس آنلاین";
+			  break;
+			case 8:
+			  text2 = "مبین نت";
+			  break;
+			case 9:
+			  text2 = "رسپینا";
+			  break;
+			case 10:
+			  text2 = "زیتل";
+			  break;
+			case 11:
+			  text2 = "پیشگامان";
+			  break;
+			case 12:
+			  text2 = "سامانتل";
+			  break;
+		  }
+
+		  document.getElementById('configs').textContent += text2+": \n" + configg + " \n\n"
+		  count++
+	}
+
+	
+})
+
+
+
+
+
+
 btn.addEventListener("click",() => {
+	document.getElementById('configs').textContent = ''
     var config = document.getElementById('input').value
     var configg = config.replace(/vmess:\/\//gm,'')
     var bytes = base64.decode(configg);
     var text = utf8.decode(bytes);
     var list = JSON.parse(text);
-    var domains = ["mci.ircf.space","mtn.ircf.space","rtl.ircf.space","mkh.ircf.space","hwb.ircf.space","ast.ircf.space","sht.ircf.space","prs.ircf.space","mbt.ircf.space","rsp.ircf.space","ztl.ircf.space","psm.ircf.space","smt.ircf.space"]
-    var names = ["Hamrah","Irancell", "Rightel", "Mokhaberat", "Hiweb", "Asiatech", "Shatel", "Pars Online", "MobinNet", "Respina", "Zitel", "Pishgaman", "Samantel"]
 
 var count = 0
 

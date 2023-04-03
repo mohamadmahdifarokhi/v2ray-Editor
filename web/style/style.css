@@ -41,6 +41,11 @@ main {
     justify-content: center;
 }
 
+p {
+    color: #ee7752;
+    font-family: Pelak;
+}
+
 .container {
     width: 20vw;
     padding: 50px;
