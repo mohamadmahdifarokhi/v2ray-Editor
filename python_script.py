@@ -45,7 +45,7 @@ def trojan(config, operator):
 	push('\n'+operator+str(operatorname(operator, globals()))+'\n'+_trojan)
 
 def main():
-	_pers = "لطفل لینک وی مس خودتون رو بدون ویمس:// ارسال کنید \n".encode("utf-8")
+	_pers = "لطفا لینک وی مس خودتون رو بدون ویمس:// ارسال کنید \n".encode("utf-8")
 	sys.stdout.buffer.write(_pers)
 	_vmessmain = input("Enter Your Config Link (For VMESS send without VMESS://):  \n")
 	if _vmessmain.startswith("vless://"):
