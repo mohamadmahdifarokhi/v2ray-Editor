@@ -10,6 +10,7 @@ import sys
 import base64
 import json
 
+
 irancell = 'mtn.ircf.space'
 mci = 'mci.ircf.space'
 rightel = 'rtl.ircf.space'
@@ -24,6 +25,7 @@ zitel = "ztl.ircf.space"
 pishgaman = "psm.ircf.space"
 samantel = "smt.ircf.space"
 
+
 _vmess = "vmess://"
 
 def operatorname(obj, namespace):
@@ -32,8 +34,34 @@ def operatorname(obj, namespace):
 def push(json2vmess):
 	print(json2vmess)
 
+def vless(config, operator):
+	_vless = config.replace(config.split('@')[1].split(':')[0], operator)
+	#print("\n"+_vless)
+	push('\n'+operator+str(operatorname(operator, globals()))+'\n'+_vless)
+
+def trojan(config, operator):
+	_trojan = config.replace(config.split('@')[1].split(':')[0], operator)
+	#print("\n"+_trojan)
+	push('\n'+operator+str(operatorname(operator, globals()))+'\n'+_trojan)
+
 def main():
-	_vmessmain = input("Enter Your Vmess (without vmess://): \n")
+	_pers = "لطفل لینک وی مس خودتون رو بدون ویمس:// ارسال کنید \n".encode("utf-8")
+	sys.stdout.buffer.write(_pers)
+	_vmessmain = input("Enter Your Config Link (For VMESS send without VMESS://):  \n")
+	if _vmessmain.startswith("vless://"):
+		vless(_vmessmain, irancell); vless(_vmessmain, mci); vless(_vmessmain, rightel)
+		vless(_vmessmain, mokhaberat); vless(_vmessmain, mobinet); vless(_vmessmain, samantel)
+		vless(_vmessmain, pishgaman); vless(_vmessmain, shatel); vless(_vmessmain, zitel)
+		vless(_vmessmain, parsonline); vless(_vmessmain, asiatech); vless(_vmessmain, raspina)
+		vless(_vmessmain, hiweb)
+		sys.exit('\nDone.')
+	if _vmessmain.startswith("trojan://"):
+		trojan(_vmessmain, irancell); trojan(_vmessmain, mci); trojan(_vmessmain, rightel)
+		trojan(_vmessmain, mokhaberat); trojan(_vmessmain, mobinet); trojan(_vmessmain, samantel)
+		trojan(_vmessmain, pishgaman); trojan(_vmessmain, shatel); trojan(_vmessmain, zitel)
+		trojan(_vmessmain, parsonline); trojan(_vmessmain, asiatech); trojan(_vmessmain, raspina)
+		trojan(_vmessmain, hiweb)
+		sys.exit('\nDone.')
 	_vmesstemp = open('weepeen.json', 'wb')
 	_vmessdecode = base64.b64decode(_vmessmain)
 	_vmesstemp.write(_vmessdecode)
@@ -67,4 +95,5 @@ operator2vmess(pishgaman)
 operator2vmess(samantel)
 operator2vmess(rightel)
 operator2vmess(zitel)
+
 
