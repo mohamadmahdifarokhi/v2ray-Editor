@@ -1,2 +1,3 @@
-# vmesseditor
-Edit vmess links to the CLEAR IP in CF CDN
+# اسکریپت تغییر کانفیگ VMESS به لینک های تمیز با استفاده از آیپی های IRCF
+ربات تلگرامی به آدرس زیر:
+@WeePeeNIRCFBot
