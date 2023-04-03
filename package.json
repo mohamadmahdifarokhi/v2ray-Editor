@@ -1,0 +1,17 @@
+{
+  "name": "vmesseditor",
+  "version": "1.0.0",
+  "description": "ربات تلگرامی به آدرس زیر: @WeePeeNIRCFBot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "dotenv": "^16.0.3",
+    "node-telegram-bot-api": "^0.61.0",
+    "utf8": "^3.0.0"
+  }
+}
