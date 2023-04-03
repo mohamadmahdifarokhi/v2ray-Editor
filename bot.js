@@ -99,10 +99,11 @@ bot.onText(/\/vmess (.+)/, (msg, match) => {
 bot.onText(/\/vless (.+)/, (msg, match) => {
   const chatId = msg.chat.id;
   const resp = match[1]
+  var count = 0
 
   for (i in domains) {
     var configg = resp.replace(/@(.*?):/gm,"@"+domains[i]+':')
-
+    var text2
     switch (count) {
 			case 0:
 			  text2 = "همراه اول";
@@ -147,20 +148,16 @@ bot.onText(/\/vless (.+)/, (msg, match) => {
 
       bot.sendMessage(chatId, text2+": \n" + configg + " \n\n");
       count++
-
-
   }
-
-
 })
 
 bot.onText(/\/trojan (.+)/, (msg, match) => {
   const chatId = msg.chat.id;
   const resp = match[1]
-
+  var count = 0
   for (i in domains) {
     var configg = resp.replace(/@(.*?):/gm,"@"+domains[i]+':')
-
+var text2 
     switch (count) {
 			case 0:
 			  text2 = "همراه اول";
